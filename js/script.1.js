@@ -16,7 +16,7 @@ Declatation variables, all for the DOM.
 class Players {
     constructor(name, XO, num, isItMyTurn = false ) {
         this.name = name; //generic for now. player One, player Two.
-        this.signedWith = `url(../img/${XO}.svg)`; //sign for UI
+        this.signedWith = `url(img/${XO}.svg)`; //sign for UI
         this.num = num;
         this.score = 0; //to keep track of the wins
         this.arr = []; // to store the grid values
@@ -136,7 +136,7 @@ function playTheGame() {
                     return endOfTheGameScreen(winnerScreen, message);
                 } else if (countArray.length === 5 && !player.won) {
                     let winnerScreen = `screen-win-tie`;
-                    let message = ` It's a Tie!🐼`; // panda could not find a tie.😆😂
+                    let message = ` It's a Tie !🐼`; // panda could not find a tie.😆😂
                     return endOfTheGameScreen(winnerScreen, message);
                 } else {
                     numTurnByPlayer = 1; //// one more turn
